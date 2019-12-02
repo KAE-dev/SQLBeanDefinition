@@ -14,7 +14,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
 import org.sqlite.SQLiteDataSource;
 
-public class Service {
+public class BeanConfiguration {
 
 
     public GenericApplicationContext xmlConnector(){

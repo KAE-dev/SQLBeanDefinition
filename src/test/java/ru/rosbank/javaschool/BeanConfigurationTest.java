@@ -13,11 +13,11 @@ import org.sqlite.SQLiteDataSource;
 
 import static org.junit.Assert.assertEquals;
 
-class BeanDefinitionTest {
+class BeanConfigurationTest {
 
     @Test
     void xmlConnectorTest() {
-        val service = new Service();
+        val service = new BeanConfiguration();
         val context = service.xmlConnector();
         assertEquals("Connector{login='admin', password='admin', dataSource=" + context.getBean("datasource") + "}",
                 context.getBean("connector").toString());
@@ -29,7 +29,7 @@ class BeanDefinitionTest {
 
     @Test
     void programmaticConnector() {
-        val service = new Service();
+        val service = new BeanConfiguration();
         val context = service.programmaticConnector();
         ProgrammaticConnector connector = (ProgrammaticConnector) context.getBean("connector");
 
@@ -40,7 +40,7 @@ class BeanDefinitionTest {
 
     @Test
     void kotlinConnector() {
-        val service = new Service();
+        val service = new BeanConfiguration();
         val context = service.kotlinConnector();
         KotlinConnector connector = (KotlinConnector) context.getBean("connector");
         assertEquals("admin", connector.getLogin());
@@ -50,7 +50,7 @@ class BeanDefinitionTest {
 
     @Test
     void javaConnector() {
-        val service = new Service();
+        val service = new BeanConfiguration();
         val context = service.javaConnector();
         JavaConnector connector = (JavaConnector) context.getBean("connector");
         assertEquals("admin", connector.getLogin());
@@ -60,7 +60,7 @@ class BeanDefinitionTest {
 
     @Test
     void groovyConnector() {
-        val service = new Service();
+        val service = new BeanConfiguration();
         val context = service.groovyConnector();
         GroovyConnector connector = (GroovyConnector) context.getBean("connector");
         assertEquals("admin", connector.getLogin());
@@ -70,7 +70,7 @@ class BeanDefinitionTest {
 
     @Test
     void annotationConnector() {
-        val service = new Service();
+        val service = new BeanConfiguration();
         val context = service.annotationConnector();
         AnnotationConnector connector = (AnnotationConnector) context.getBean("connector");
         AnnotationDataSource sqliteDataSource = (AnnotationDataSource) context.getBean("datasource");
