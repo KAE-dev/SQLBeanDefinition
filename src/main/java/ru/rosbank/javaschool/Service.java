@@ -1,8 +1,8 @@
-package javaschool;
+package ru.rosbank.javaschool;
 
-import javaschool.java.JavaConfiguration;
-import javaschool.kotlin.BeansKt;
-import javaschool.programmatic.ProgrammaticConnector;
+import ru.rosbank.javaschool.java.JavaConfiguration;
+import ru.rosbank.javaschool.kotlin.BeansKt;
+import ru.rosbank.javaschool.programmatic.ProgrammaticConnector;
 import lombok.val;
 import org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver;
 import org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader;
@@ -15,6 +15,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.sqlite.SQLiteDataSource;
 
 public class Service {
+
+
     public GenericApplicationContext xmlConnector(){
         val context = new GenericApplicationContext();
         new XmlBeanDefinitionReader(context).loadBeanDefinitions("context.xml");
@@ -63,7 +65,7 @@ public class Service {
         return context;
     }
     public AnnotationConfigApplicationContext annotationConnector(){
-        val context = new AnnotationConfigApplicationContext("javaschool.annotation");
+        val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.annotation");
         return context;
     }
 }

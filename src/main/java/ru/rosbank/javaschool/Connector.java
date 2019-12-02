@@ -1,4 +1,4 @@
-package javaschool;
+package ru.rosbank.javaschool;
 
 public interface Connector {
     @Override

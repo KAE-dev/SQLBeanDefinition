@@ -1,4 +1,4 @@
-package javaschool.annotation;
+package ru.rosbank.javaschool.annotation;
 
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;

@@ -1,8 +1,8 @@
-package javaschool;
+package ru.rosbank.javaschool;
 
-import javaschool.java.JavaConfiguration;
-import javaschool.kotlin.BeansKt;
-import javaschool.programmatic.ProgrammaticConnector;
+import ru.rosbank.javaschool.java.JavaConfiguration;
+import ru.rosbank.javaschool.kotlin.BeansKt;
+import ru.rosbank.javaschool.programmatic.ProgrammaticConnector;
 import lombok.val;
 import org.springframework.beans.factory.annotation.QualifierAnnotationAutowireCandidateResolver;
 import org.springframework.beans.factory.groovy.GroovyBeanDefinitionReader;

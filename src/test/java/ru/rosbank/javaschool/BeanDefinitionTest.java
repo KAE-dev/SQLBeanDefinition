@@ -1,27 +1,29 @@
-package javaschool;
+package ru.rosbank.javaschool;
 
-import javaschool.annotation.AnnotationConnector;
-import javaschool.annotation.AnnotationDataSource;
-import javaschool.groovy.GroovyConnector;
-import javaschool.java.JavaConnector;
-import javaschool.kotlin.KotlinConnector;
-import javaschool.programmatic.ProgrammaticConnector;
-import javaschool.xml.XmlConnector;
+import ru.rosbank.javaschool.annotation.AnnotationConnector;
+import ru.rosbank.javaschool.annotation.AnnotationDataSource;
+import ru.rosbank.javaschool.groovy.GroovyConnector;
+import ru.rosbank.javaschool.java.JavaConnector;
+import ru.rosbank.javaschool.kotlin.KotlinConnector;
+import ru.rosbank.javaschool.programmatic.ProgrammaticConnector;
+import ru.rosbank.javaschool.xml.XmlConnector;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.sqlite.SQLiteDataSource;
 
 import static org.junit.Assert.assertEquals;
 
-class ServiceTest {
+class BeanDefinitionTest {
 
     @Test
-    void xmlConnector() {
+    void xmlConnectorTest() {
         val service = new Service();
         val context = service.xmlConnector();
         assertEquals("Connector{login='admin', password='admin', dataSource=" + context.getBean("datasource") + "}",
                 context.getBean("connector").toString());
         XmlConnector connector = (XmlConnector) context.getBean("connector");
+        assertEquals("admin", connector.getLogin());
+        assertEquals("admin", connector.getPassword());
         assertEquals("jdbc:sqlite:db.sqlite", ((SQLiteDataSource) connector.getDataSource()).getUrl());
     }
 

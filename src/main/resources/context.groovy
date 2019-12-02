@@ -1,4 +1,4 @@
-import javaschool.groovy.GroovyConnector
+import ru.rosbank.javaschool.groovy.GroovyConnector
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer
 import org.sqlite.SQLiteDataSource
 

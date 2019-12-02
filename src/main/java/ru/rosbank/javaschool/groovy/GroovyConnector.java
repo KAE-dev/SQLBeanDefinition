@@ -1,6 +1,6 @@
-package javaschool.groovy;
+package ru.rosbank.javaschool.groovy;
 
-import javaschool.Connector;
+import ru.rosbank.javaschool.Connector;
 import lombok.Getter;
 
 import javax.sql.DataSource;
@@ -19,10 +19,14 @@ public class GroovyConnector implements Connector {
 
   @Override
   public String toString() {
-    return "Connector{" +
-            "login='" + login + '\'' +
-            ", password='" + password + '\'' +
-            ", dataSource=" + dataSource +
+    return "Connector{"
+            +
+            "login='" + login + '\''
+            +
+            ", password='" + password + '\''
+            +
+            ", dataSource=" + dataSource
+            +
             '}';
   }
 }

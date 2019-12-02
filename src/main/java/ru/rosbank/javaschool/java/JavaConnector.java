@@ -1,7 +1,7 @@
-package javaschool.java;
+package ru.rosbank.javaschool.java;
 
 
-import javaschool.Connector;
+import ru.rosbank.javaschool.Connector;
 import lombok.Getter;
 
 import javax.sql.DataSource;
@@ -20,10 +20,14 @@ public class JavaConnector implements Connector {
 
   @Override
   public String toString() {
-    return "Connector{" +
-            "login='" + login + '\'' +
-            ", password='" + password + '\'' +
-            ", dataSource=" + dataSource +
+    return "Connector{"
+            +
+            "login='" + login + '\''
+            +
+            ", password='" + password + '\''
+            +
+            ", dataSource=" + dataSource
+            +
             '}';
   }
 }

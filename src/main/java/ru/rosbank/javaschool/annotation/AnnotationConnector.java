@@ -1,6 +1,6 @@
-package javaschool.annotation;
+package ru.rosbank.javaschool.annotation;
 
-import javaschool.Connector;
+import ru.rosbank.javaschool.Connector;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -23,10 +23,14 @@ public class AnnotationConnector implements Connector {
 
   @Override
   public String toString() {
-    return "Connector{" +
-            "login='" + login + '\'' +
-            ", password='" + password + '\'' +
-            ", dataSource=" + dataSource +
+    return "Connector{"
+            +
+            "login='" + login + '\''
+            +
+            ", password='" + password + '\''
+            +
+            ", dataSource=" + dataSource
+            +
             '}';
   }
 }

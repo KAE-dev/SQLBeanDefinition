@@ -1,4 +1,4 @@
-package javaschool.kotlin
+package ru.rosbank.javaschool.kotlin
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer
 import org.springframework.context.support.beans
 import org.springframework.core.io.ClassPathResource

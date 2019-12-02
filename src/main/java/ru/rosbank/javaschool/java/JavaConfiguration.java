@@ -1,4 +1,4 @@
-package javaschool.java;
+package ru.rosbank.javaschool.java;
 
 import lombok.val;
 import org.springframework.beans.factory.annotation.Value;

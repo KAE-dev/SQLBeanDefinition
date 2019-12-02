@@ -1,8 +1,8 @@
-package javaschool.xml;
+package ru.rosbank.javaschool.xml;
 
 
 
-import javaschool.Connector;
+import ru.rosbank.javaschool.Connector;
 import lombok.Getter;
 
 import javax.sql.DataSource;
@@ -24,10 +24,14 @@ public class XmlConnector implements Connector {
 
     @Override
     public String toString() {
-        return "Connector{" +
-                "login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", dataSource=" + dataSource +
+        return "Connector{"
+                +
+                "login='" + login + '\''
+                +
+                ", password='" + password + '\''
+                +
+                ", dataSource=" + dataSource
+                +
                 '}';
     }
 }

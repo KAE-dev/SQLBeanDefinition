@@ -1,4 +1,4 @@
-package javaschool.annotation;
+package ru.rosbank.javaschool.annotation;
 
 import org.springframework.stereotype.Component;
 import org.sqlite.SQLiteDataSource;

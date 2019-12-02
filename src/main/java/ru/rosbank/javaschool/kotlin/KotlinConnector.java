@@ -1,6 +1,6 @@
-package javaschool.kotlin;
+package ru.rosbank.javaschool.kotlin;
 
-import javaschool.Connector;
+import ru.rosbank.javaschool.Connector;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -20,10 +20,14 @@ public class KotlinConnector implements Connector {
 
   @Override
   public String toString() {
-    return "Connector{" +
-            "login='" + login + '\'' +
-            ", password='" + password + '\'' +
-            ", dataSource=" + dataSource +
+    return "Connector{"
+            +
+            "login='" + login + '\''
+            +
+            ", password='" + password + '\''
+            +
+            ", dataSource=" + dataSource
+            +
             '}';
   }
 }
