@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/KAE-dev/SQLBeanDefinition.svg?branch=master)](https://travis-ci.org/KAE-dev/SQLBeanDefinition)
+[![Build Status](https://travis-ci.org/KAE-dev/SQLBeanDefinition.svg?branch=master)](https://travis-ci.org/KAE-dev/SQLBeanDefinition) [![codecov](https://codecov.io/gh/KAE-dev/SQLBeanDefinition/branch/master/graph/badge.svg)](https://codecov.io/gh/KAE-dev/SQLBeanDefinition)
