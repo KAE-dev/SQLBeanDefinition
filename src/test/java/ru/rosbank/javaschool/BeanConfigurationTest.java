@@ -11,7 +11,8 @@ import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.sqlite.SQLiteDataSource;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 class BeanConfigurationTest {
 
