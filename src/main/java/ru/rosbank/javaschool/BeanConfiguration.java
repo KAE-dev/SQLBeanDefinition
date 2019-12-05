@@ -32,10 +32,8 @@ public class BeanConfiguration {
             configurer.setLocation(new ClassPathResource("db.properties"));
             return configurer;
         });
-        context.registerBean("datasource", SQLiteDataSource.class, () -> {
-            val dataSource = new SQLiteDataSource();
-            dataSource.setUrl("jdbc:sqlite:db.sqlite");
-            return dataSource;
+        context.registerBean("datasource", SQLiteDataSource.class, db -> {
+            db.getPropertyValues().addPropertyValue("url","${url}");
         });
         context.registerBean("connector", ProgrammaticConnector.class,
                 "${login}", "${password}",
