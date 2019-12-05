@@ -1,5 +1,6 @@
 package ru.rosbank.javaschool;
 
+import org.springframework.beans.factory.config.RuntimeBeanReference;
 import ru.rosbank.javaschool.java.JavaConfiguration;
 import ru.rosbank.javaschool.kotlin.BeansKt;
 import ru.rosbank.javaschool.programmatic.ProgrammaticConnector;
@@ -25,22 +26,20 @@ public class BeanConfiguration {
     }
 
     public GenericApplicationContext programmaticConnector(){
-        val db = new GenericApplicationContext();
-        db.registerBean("datasource", SQLiteDataSource.class, () -> {
-            val dataSource = new SQLiteDataSource();
-            dataSource.setUrl("jdbc:sqlite:db.sqlite");
-            return dataSource;
-        });
-        db.refresh();
         val context = new GenericApplicationContext();
         context.registerBean(PropertySourcesPlaceholderConfigurer.class, () -> {
             val configurer = new PropertySourcesPlaceholderConfigurer();
             configurer.setLocation(new ClassPathResource("db.properties"));
             return configurer;
         });
-        context.registerBean("connector",
-                ProgrammaticConnector.class,
-                "${login}", "${password}", db.getBean("datasource"));
+        context.registerBean("datasource", SQLiteDataSource.class, () -> {
+            val dataSource = new SQLiteDataSource();
+            dataSource.setUrl("jdbc:sqlite:db.sqlite");
+            return dataSource;
+        });
+        context.registerBean("connector", ProgrammaticConnector.class,
+                "${login}", "${password}",
+                new RuntimeBeanReference("datasource"));
         context.refresh();
         return context;
     }
