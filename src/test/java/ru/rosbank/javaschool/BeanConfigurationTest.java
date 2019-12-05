@@ -5,6 +5,7 @@ import ru.rosbank.javaschool.annotation.AnnotationDataSource;
 import ru.rosbank.javaschool.groovy.GroovyConnector;
 import ru.rosbank.javaschool.java.JavaConnector;
 import ru.rosbank.javaschool.kotlin.KotlinConnector;
+import ru.rosbank.javaschool.kotlin.SQLKotlinConnector;
 import ru.rosbank.javaschool.programmatic.ProgrammaticConnector;
 import ru.rosbank.javaschool.xml.XmlConnector;
 import lombok.val;
@@ -44,9 +45,10 @@ class BeanConfigurationTest {
         val service = new BeanConfiguration();
         val context = service.kotlinConnector();
         KotlinConnector connector = (KotlinConnector) context.getBean("connector");
+        SQLKotlinConnector sqlConnector = (SQLKotlinConnector) context.getBean("datasource");
         assertEquals("admin", connector.getLogin());
         assertEquals("admin", connector.getPassword());
-        assertEquals("jdbc:sqlite:db.sqlite", ((SQLiteDataSource) connector.getDataSource()).getUrl());
+        assertEquals("jdbc:sqlite:db.sqlite", sqlConnector.getUrl());
     }
 
     @Test

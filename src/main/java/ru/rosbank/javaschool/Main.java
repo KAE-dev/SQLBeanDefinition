@@ -65,7 +65,7 @@ public class Main {
             System.out.println(context.getBean("connector"));
         }
         {
-            val context = new AnnotationConfigApplicationContext("javaschool.annotation");
+            val context = new AnnotationConfigApplicationContext("ru.rosbank.javaschool.annotation");
             System.out.println(context.getBean("connector"));
         }
     }
