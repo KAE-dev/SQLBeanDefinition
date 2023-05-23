@@ -18,7 +18,7 @@
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
         <spring.version>5.2.1.RELEASE</spring.version>
         <groovy.version>2.5.8</groovy.version>
-        <sqlite.version>3.28.0</sqlite.version>
+        <sqlite.version>3.41.2.2</sqlite.version>
         <junit-jupiter.version>5.5.2</junit-jupiter.version>
         <maven-pmd-plugin.version>3.12.0</maven-pmd-plugin.version>
         <maven-checkstyle-plugin.version>3.1.0</maven-checkstyle-plugin.version>
